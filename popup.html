@@ -1,0 +1,43 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  body{width:280px;margin:0;padding:16px;font:14px system-ui,sans-serif;color:#0f172a}
+  h2{margin:0 0 12px;font-size:16px}
+  input[type=password],input[type=number]{width:100%;box-sizing:border-box;padding:8px;margin:4px 0 8px;border:1px solid #cbd5e1;border-radius:6px}
+  button{width:100%;padding:9px;border:0;border-radius:6px;background:#0ea5e9;color:#fff;font-weight:600;cursor:pointer;margin-top:4px}
+  button.sec{background:#e2e8f0;color:#0f172a}
+  button.danger{background:#fee2e2;color:#b91c1c}
+  label{display:block;font-size:12px;color:#475569}
+  .row{display:flex;align-items:center;gap:6px;margin:6px 0}
+  hr{border:0;border-top:1px solid #e2e8f0;margin:12px 0}
+  #msg{font-size:12px;min-height:16px;margin-top:8px;color:#b91c1c}
+  #msg.ok{color:#15803d}
+  .hidden{display:none}
+</style></head><body>
+  <h2>🔒 Browser Lock</h2>
+
+  <div id="unlockView" class="hidden">
+    <label>Password</label><input id="unlockPw" type="password">
+    <button id="unlockBtn">Unlock</button>
+  </div>
+
+  <div id="setupView" class="hidden">
+    <p style="margin:0 0 8px">Create a password to get started.</p>
+    <label>New password</label><input id="newPw" type="password">
+    <button id="setBtn">Set password</button>
+  </div>
+
+  <div id="mainView" class="hidden">
+    <button id="lockBtn">Lock now</button>
+    <hr>
+    <label>Auto-lock after idle (minutes, 0 = off)</label>
+    <input id="idleMin" type="number" min="0" max="1440">
+    <button id="saveBtn" class="sec">Save settings</button>
+    <hr>
+    <label>Current password (to change or remove)</label><input id="curPw" type="password">
+    <label>New password</label><input id="chgPw" type="password">
+    <button id="chgBtn" class="sec">Change password</button>
+    <button id="rmBtn" class="danger">Remove password</button>
+  </div>
+  <div id="msg"></div>
+<script src="popup.js"></script>
+</body></html>

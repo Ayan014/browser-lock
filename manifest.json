@@ -1,0 +1,9 @@
+{
+  "manifest_version": 3,
+  "name": "Browser Lock",
+  "version": "2.0.0",
+  "description": "Asks for a password when you open the browser. Optional auto-lock on idle.",
+  "permissions": ["storage", "idle"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Browser Lock" }
+}

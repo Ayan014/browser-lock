@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Browser Locked</title><style>
+  html,body{height:100%;margin:0}
+  body{background:#0f172a;display:flex;align-items:center;justify-content:center;
+    font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#e2e8f0}
+  form{width:320px;padding:32px;border-radius:16px;background:#1e293b;text-align:center;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+  .icon{font-size:40px;margin-bottom:8px} h1{font-size:20px;margin:0 0 20px}
+  input{width:100%;box-sizing:border-box;padding:12px;border-radius:8px;border:1px solid #475569;background:#0f172a;color:#fff;font-size:15px;outline:none}
+  input:focus{border-color:#38bdf8}
+  button{width:100%;margin-top:12px;padding:12px;border:0;border-radius:8px;background:#0ea5e9;color:#fff;font-size:15px;font-weight:600;cursor:pointer}
+  button:hover{background:#0284c7}
+  .err{color:#f87171;font-size:13px;min-height:18px;margin-top:10px}
+</style></head><body>
+  <form id="f">
+    <div class="icon">🔒</div><h1>Browser Locked</h1>
+    <input id="pw" type="password" placeholder="Enter password" autocomplete="off" autofocus>
+    <button type="submit">Unlock</button><div class="err" id="err"></div>
+  </form>
+<script src="lock.js"></script>
+</body></html>
